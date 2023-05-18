@@ -13,7 +13,7 @@ body {
     background: #c4d0dc;
 }
 
-p, h2 {
+p, h2, form {
     position: relative;
     z-index: 1;
     margin: 20px 15%;
