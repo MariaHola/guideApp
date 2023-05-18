@@ -10,7 +10,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/icon.png">
     <meta property="og:image" content="../images/share.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script defer src="script.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/text.css" rel="stylesheet">
+    <link href="css/text.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <title>Twój przewodnik</title>
 </head>
 
@@ -23,33 +30,50 @@
             jedziecie i ile osób obejmuje grupa - mamy kogoś, kto świetnie się Wami zaopiekuje!</p>
     </section>
     <section class="image"></section>
-    <section class="text">
+    <section class="text--form">
         <h2>Powiedz nam kogo szukasz!</h2>
-        <p>
-        <p>
-            <label for="name">Twoje imię:</label>
-            <input type="text" id="name" required>
-        </p>
-        <p>
-            <label for="email">Adres email:</label>
-            <input type="email" id="email" required>
-        </p>
-        <p>
-            <label for="number">Numer telefonu:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
-        </p>
-        <p>
-            <label for="week">Termin podróży:</label>
-            <input type="week" name="week" id="camp-week" min="2023-W18" max="2024-W26" required>
-        </p>
-        <p>
-            <input class="send" type="submit" />
-        </p>
-        <p>
+        <form>
+            <fieldset>
+                <p>
+                    <label>
+                        <span class="form__labelText">
+                            Twoje imię:
+                        </span>
+                        <input class="form__field" name="firstName" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">
+                            Twój mail:
+                        </span>
+                        <input class="form__field" type="email" name="email" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Numer telefonu:</span>
+                        <input class="form__field" type="tel" name="phone" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Detale podróży:</span>
+                        <textarea class="form__field form__field--textarea"
+                            placeholder="Tutaj opisz nam gdzie chcesz pojechać i w jakim terminie."></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Data wyjazdu:</span>
+                        <input class="form__field js-date" type="date" required>
+                    </label>
+                </p>
+            </fieldset>
             <p>
-                <input placeholder="Tutaj opisz nam gdzie chcesz pojechać, na jak długo i jaka będzie specyfika Twojej podróży" />
+                <button class="form__button">Wyślij!</button>
             </p>
-        </p>
+        </form>
     </section>
     <section class="image"></section>
     <section class="text">
@@ -78,6 +102,12 @@
         <p>Wszystkie koszty usługi są doliczone do faktury końcowej, którą opłacasz na tydzień przed planowaną
             wycieczką. W zależności od czasu trwania oraz ilości uczestników prowizja dla portalu Twój przewodnik® może
             wynieść od 70 zł do 450 zł za całą grupę.</p>
+    </section>
+    <section class="image"></section>
+    <section class="text">
+        <h2>Najczęściej zadawane pytania.</h2>
+        <p class="section__question"></p>
+        <p></p>
     </section>
     <section class="image"></section>
     <section class="text">
